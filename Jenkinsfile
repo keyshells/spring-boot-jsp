@@ -6,13 +6,13 @@ pipeline {
     }
     
     parameters {
-        string(name: 'SERVER_IP', defaultValue: '127.0.0.1', description: 'Provide production server IP Address.')
+        string(name: 'SERVER_IP', defaultValue: '35.244.1.187', description: 'Provide production server IP Address.')
     }
 
     stages {
         stage('Source') {
             steps {
-                git branch: 'main', changelog: false, credentialsId: 'github', poll: false, url: 'https://github.com/ajilraju/spring-boot-jsp.git'
+                git branch: 'develop', changelog: false, credentialsId: 'd0e97555-119c-44e5-87e9-9fb37ea9b239', poll: false, url: 'https://github.com/amalbinoy/spring-boot-jsp.git'
             }
         }
         stage('Test') {
